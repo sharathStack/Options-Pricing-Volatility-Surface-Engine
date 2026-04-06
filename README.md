@@ -1,4 +1,4 @@
-Options Pricing & Volatility Surface Engine
+# Options Pricing & Volatility Surface Engine
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![SciPy](https://img.shields.io/badge/Optimisation-SciPy-orange)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
@@ -46,9 +46,9 @@ Expected terminal output:
 Dashboard saved → vol_surface_dashboard.png
 ```
 ---
-Models Implemented
+## Models Implemented
 
-Model	Method	Use Case
+Model Method Use Case
 
 Black-Scholes-Merton	Analytical (exact)	Fast pricing + full Greeks
 
@@ -59,10 +59,11 @@ Monte Carlo	Antithetic + control variate	Exotic / barrier options
 SABR	Hagan (2002) approximation	Vol smile parametrisation
 
 ---
-Greeks Computed
+## Greeks Computed
 `Δ` · `Γ` · `Θ` · `Vega` · `ρ` · `Vanna (dΔ/dσ)` · `Volga (dVega/dσ)` · `Charm (dΔ/dt)`
 ---
-Vol Surface
+## Vol Surface
+
 Tenors: 1W, 1M, 3M, 6M, 1Y
 
 Moneyness grid: log(F/K) from −0.30 to +0.30 (13 strikes)
@@ -73,12 +74,15 @@ Interpolation available at arbitrary (K, T) via `vol_surface.get_vol(K, T)`
 
 ---
 Variance Reduction (Monte Carlo)
+
 Technique	Variance Reduction
+
 Naive MC	1× (baseline)
+
 + Antithetic variates	~2×
 + Control variate (BSM)	~10×
 ---
-Dashboard Output
+## Dashboard Output
 
 `vol_surface_dashboard.png` — 8-panel dashboard:
 
@@ -99,7 +103,7 @@ SABR parameters (α, ρ, ν) by tenor
 1-day 99% parametric VaR summary panel
 
 ---
-References
+## References
 
 Black & Scholes (1973). The Pricing of Options and Corporate Liabilities. JPE.
 
